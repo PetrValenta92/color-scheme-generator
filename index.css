@@ -1,0 +1,38 @@
+/* ---------- CUSTOM PROPERTIES --------------- */
+
+:root {
+    /* Light mode */
+    --cl-white-bg: 0, 0%, 100%;
+    --cl-select-option-light: 221, 39%, 11%;
+    --cl-submit-light: 217, 19%, 27%;
+    --cl-hex-light: 250, 18%, 19%;
+    --cl-border-light: 216, 12%, 84%;
+
+    /* Dark mode */
+}
+
+/* RESET */
+/* CSS Reset https://andy-bell.co.uk/a-modern-css-reset/ */
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+/* Set up body */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+}
