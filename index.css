@@ -36,3 +36,58 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.5;
 }
+
+/* ---------------- UTILITY CLASSES ------------------*/
+
+.container,
+.hex {
+    margin: 0 auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 34.375rem;
+}
+
+.grid {
+    display: grid;
+}
+
+.color1 {
+    background-color: #000080;
+    width: 100%;
+    max-width: 6.875rem;
+    height: 70vh;
+}
+
+.color2 {
+    background-color: #FFF700;
+}
+
+.hex {
+    color: hsl(var(--cl-hex-light));
+    font-size: .875rem;
+    font-weight: 500;
+}
+
+/* ----------------- TYPOGRAPHY ------------------- */
+
+/* ----------------- FORM ------------------- */
+
+/* ---------------- LAYOUT -------------------- */
+
+header > .container {
+    border: 1px solid red;
+    padding: 1.5rem .875rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+main > .container {
+    grid-template-rows: auto auto;
+}
+
+.colors,
+.hexes {
+    grid-template-columns: repeat(5, 1fr);
+}
