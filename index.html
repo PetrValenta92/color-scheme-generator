@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Color Scheme Generator</title>
+    <!-- https://www.thecolorapi.com/docs#schemes -->
+  </head>
+  <body>
+    <button>Toggle dark mode</button>
+    <header>
+      <form class="container">
+        <input type="color" />
+        <select name="scheme" id="scheme">
+          <option value="monochrome">Monochrome</option>
+          <option value="monochrome-dark">Monochrome-dark</option>
+          <option value="monochrome-light">Monochrome-light</option>
+          <option value="analogic">Analogic</option>
+          <option value="complement">Complement</option>
+          <option value="analogic-complement">Analogic-complement</option>
+          <option value="triad">Triad</option>
+        </select>
+        <input type="submit" />
+      </form>
+    </header>
+    <main id="colors">
+      <!-- Colors lives here -->
+      <div class="container">
+        <div class="colors">
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+        </div>
+        <div class="hexes">
+          <div class="hex">#000080</div>
+          <div class="hex">#000080</div>
+          <div class="hex">#000080</div>
+          <div class="hex">#000080</div>
+          <div class="hex">#000080</div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
