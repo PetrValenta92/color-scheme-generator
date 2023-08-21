@@ -2,6 +2,7 @@
 
 :root {
     /* Light mode */
+    --cl-body-bg: 0, 0%, 90%;
     --cl-white-bg: 0, 0%, 100%;
     --cl-select-option-light: 221, 39%, 11%;
     --cl-submit-light: 217, 19%, 27%;
@@ -35,6 +36,8 @@ p {
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.5;
+    margin: 10vh auto;
+    background-color: hsl(var(--cl-body-bg));
 }
 
 /* ---------------- UTILITY CLASSES ------------------*/
@@ -53,19 +56,18 @@ body {
     display: grid;
 }
 
-.color1 {
+.color {
     background-color: #000080;
     width: 100%;
     max-width: 6.875rem;
-    height: 70vh;
-}
+    height: 45vh;
 
-.color2 {
-    background-color: #FFF700;
+    border: 1px solid limegreen;
 }
 
 .hex {
     color: hsl(var(--cl-hex-light));
+    padding: .75rem 0;
     font-size: .875rem;
     font-weight: 500;
 }
@@ -74,13 +76,48 @@ body {
 
 /* ----------------- FORM ------------------- */
 
+input,
+select {
+    cursor: pointer;
+    background-color: inherit;
+    color: inherit;
+    font-family: inherit;
+    border: 1px solid hsl(var(--cl-border-light));
+}
+
+input[type="color"] {
+    background-color: hsl(var(--cl-body-bg));
+    width: 3.75rem;
+    height: 2.625rem;
+}
+
+select {
+    border-radius: .375rem;
+    width: 19.5rem;
+    padding: .625rem .75rem;
+}
+
+select:focus {
+    background-color: red;
+}
+
+
+
+input[type=submit] {
+    padding: .75rem .875rem;
+    border-radius: .25rem;
+    font-size: .75rem;
+    font-weight: 500;
+}
+
 /* ---------------- LAYOUT -------------------- */
 
 header > .container {
-    border: 1px solid red;
     padding: 1.5rem .875rem;
     display: flex;
     justify-content: space-between;
+    gap: .75rem; 
+    background-color: hsl(var(--cl-white-bg));
 }
 
 main > .container {
@@ -90,4 +127,8 @@ main > .container {
 .colors,
 .hexes {
     grid-template-columns: repeat(5, 1fr);
+}
+
+.hexes {
+    background-color: hsl(var(--cl-white-bg));
 }
