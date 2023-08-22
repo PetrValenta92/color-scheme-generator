@@ -68,11 +68,24 @@ body {
 .hex {
     color: hsl(var(--cl-hex-light));
     padding: .75rem 0;
-    font-size: .875rem;
-    font-weight: 500;
 }
 
 /* ----------------- TYPOGRAPHY ------------------- */
+
+input,
+select {
+    font-family: inherit;
+}
+
+input[type=submit] {
+    font-size: .75rem;
+    font-weight: 500;
+}
+
+.hex {
+    font-size: .875rem;
+    font-weight: 500;
+}
 
 /* ----------------- FORM ------------------- */
 
@@ -81,7 +94,6 @@ select {
     cursor: pointer;
     background-color: inherit;
     color: inherit;
-    font-family: inherit;
     border: 1px solid hsl(var(--cl-border-light));
 }
 
@@ -97,17 +109,9 @@ select {
     padding: .625rem .75rem;
 }
 
-select:focus {
-    background-color: red;
-}
-
-
-
 input[type=submit] {
     padding: .75rem .875rem;
     border-radius: .25rem;
-    font-size: .75rem;
-    font-weight: 500;
 }
 
 /* ---------------- LAYOUT -------------------- */
