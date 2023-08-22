@@ -2,8 +2,16 @@
 
 let colorsArray = [];
 
-function render() {
-    document.getElementById("color-scheme").innerHTML = "";
+function renderScheme() {
+    document.getElementById("color-scheme").innerHTML = colorsArray.map((color) =>
+        `<div>
+            <div id="color" class="color" style="background-color: ${color}"></div>
+            <div class="hex">${color}</div>
+        </div>`).join("");
+}
+
+function clearColorsArray() {
+    colorsArray.length = 0;
 }
 
 document.getElementById("new-scheme").addEventListener("submit", (e) => {
@@ -14,7 +22,10 @@ document.getElementById("new-scheme").addEventListener("submit", (e) => {
     fetch(`https://www.thecolorapi.com/scheme?hex=${color}&mode=${mode}&count=5`)
     .then(respo => respo.json())
     .then(data => {
-        return data.colors;
+        const colorsDataArray = Array.from(data.colors);
+        colorsDataArray.map((color) => colorsArray.push(color.hex.value));
+        renderScheme();
+        clearColorsArray();
     });
 });
 
