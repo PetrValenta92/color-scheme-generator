@@ -16,9 +16,9 @@
   <body>
     <!-- <button>Toggle dark mode</button> -->
     <header>
-      <form class="container">
-        <input type="color" />
-        <select name="scheme" id="scheme">
+      <form id="new-scheme" class="container">
+        <input type="color" id="new-color" />
+        <select name="mode" id="new-mode">
           <option value="monochrome">Monochrome</option>
           <option value="monochrome-dark">Monochrome-dark</option>
           <option value="monochrome-light">Monochrome-light</option>
@@ -30,7 +30,7 @@
         <input type="submit" value="Get color scheme" />
       </form>
     </header>
-    <main id="colors">
+    <main id="color-scheme">
       <!-- Colors lives here -->
       <div class="container grid">
         <div class="colors grid">
@@ -49,5 +49,6 @@
         </div>
       </div>
     </main>
+    <script src="index.js"></script>
   </body>
 </html>
