@@ -81,6 +81,13 @@ body {
   color: hsl(var(--cl-hex));
   padding: 0.75rem 0;
   text-align: center;
+  cursor: pointer;
+}
+
+.hex:hover,
+.hex:focus {
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 /* ----------------- TYPOGRAPHY ------------------- */
