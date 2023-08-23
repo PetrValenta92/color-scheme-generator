@@ -41,7 +41,6 @@ document.getElementById("new-scheme").addEventListener("submit", (e) => {
 document.getElementById("color-scheme").addEventListener("click", (e) => {
     if (e.target.classList.contains("hex")) {
         const hexValue = e.target.textContent;
-        console.log(hexValue);
         copyToClipboard(hexValue);
         alert(`Copied ${hexValue} to clipboard!`);
     }
