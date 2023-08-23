@@ -1,15 +1,29 @@
 /* ---------- CUSTOM PROPERTIES --------------- */
 
 :root {
-  /* Light mode */
-  --cl-body-bg: 0, 0%, 90%;
-  --cl-white-bg: 0, 0%, 100%;
-  --cl-select-option-light: 221, 39%, 11%;
-  --cl-submit-light: 217, 19%, 27%;
-  --cl-hex-light: 250, 18%, 19%;
-  --cl-border-light: 216, 12%, 84%;
+  --cl-body-bg: 0, 0%, 11%;
+  --cl-input-color-bg: 0, 0%, 90%;
+  --cl-border: 216, 12%, 84%;
 
-  /* Dark mode */
+  /* Light mode */
+  --cl-bg: 0, 0%, 100%;
+  --cl-select-option: 221, 39%, 11%;
+  --cl-submit: 217, 19%, 27%;
+  --cl-submit-bg: 0, 0%, 100%;
+  --cl-submit-border: 216, 12%, 84%;
+  --cl-hex: 250, 18%, 19%;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Dark mode */
+        --cl-bg: 215, 28%, 17%;
+        --cl-select-option: 255, 5%, 84%;
+        --cl-submit: 0, 0%, 100%;
+        --cl-submit-bg: 216, 22%, 31%;
+        --cl-submit-border: 216, 22%, 31%;
+        --cl-hex: 255, 5%, 84%;
+    }
 }
 
 /* RESET */
@@ -63,8 +77,8 @@ body {
 }
 
 .hex {
-  background-color: hsl(var(--cl-white-bg));
-  color: hsl(var(--cl-hex-light));
+  background-color: hsl(var(--cl-bg));
+  color: hsl(var(--cl-hex));
   padding: 0.75rem 0;
   text-align: center;
 }
@@ -74,6 +88,10 @@ body {
 input,
 select {
   font-family: inherit;
+}
+
+option:checked {
+    font-weight: 600;
 }
 
 input[type="submit"] {
@@ -92,28 +110,27 @@ input,
 select {
   cursor: pointer;
   background-color: inherit;
-  color: inherit;
-  border: 1px solid hsl(var(--cl-border-light));
+  border: 1px solid hsl(var(--cl-border));
 }
 
 input[type="color"] {
-  background-color: hsl(var(--cl-body-bg));
+  background-color: hsl(var(--cl-input-color-bg));
   width: 3.75rem;
   height: 2.625rem;
 }
 
 select {
+  color: hsl(var(--cl-select-option));
   border-radius: 0.375rem;
   width: 19.5rem;
   padding: 0.625rem 0.75rem;
 }
 
-option:focus {
-  font-weight: 600;
-}
-
 input[type="submit"] {
+  color: hsl(var(--cl-submit));
+  background-color: hsl(var(--cl-submit-bg));
   padding: 0.75rem 0.875rem;
+  border: 1px solid hsl(var(--cl-submit-border));
   border-radius: 0.25rem;
 }
 
@@ -124,7 +141,7 @@ header > .container {
   display: flex;
   justify-content: space-between;
   gap: 0.75rem;
-  background-color: hsl(var(--cl-white-bg));
+  background-color: hsl(var(--cl-bg));
 }
 
 main > .container {
