@@ -6,7 +6,7 @@ function renderScheme() {
     document.getElementById("color-scheme").innerHTML = colorsArray.map((color) =>
         `<div>
             <div id="color" class="color" style="background-color: ${color}"></div>
-            <div class="hex">${color}</div>
+            <div id="hex" class="hex">${color}</div>
         </div>`).join("");
 }
 
