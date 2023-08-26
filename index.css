@@ -15,15 +15,15 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        /* Dark mode */
-        --cl-bg: 215, 28%, 17%;
-        --cl-select-option: 255, 5%, 84%;
-        --cl-submit: 0, 0%, 100%;
-        --cl-submit-bg: 216, 22%, 31%;
-        --cl-submit-border: 216, 22%, 31%;
-        --cl-hex: 255, 5%, 84%;
-    }
+  :root {
+    /* Dark mode */
+    --cl-bg: 215, 28%, 17%;
+    --cl-select-option: 255, 5%, 84%;
+    --cl-submit: 0, 0%, 100%;
+    --cl-submit-bg: 216, 22%, 31%;
+    --cl-submit-border: 216, 22%, 31%;
+    --cl-hex: 255, 5%, 84%;
+  }
 }
 
 /* RESET */
@@ -98,10 +98,11 @@ select {
 }
 
 option:checked {
-    font-weight: 600;
+  font-weight: 600;
 }
 
-input[type="submit"] {
+form > button {
+  font-family: inherit;
   font-size: 0.75rem;
   font-weight: 500;
 }
@@ -133,10 +134,12 @@ select {
   padding: 0.625rem 0.75rem;
 }
 
-input[type="submit"] {
+/* ---------------- BUTTON -------------------- */
+
+form > button {
   color: hsl(var(--cl-submit));
   background-color: hsl(var(--cl-submit-bg));
-  padding: 0.75rem 0.875rem;
+  padding: 0 0.625rem;
   border: 1px solid hsl(var(--cl-submit-border));
   border-radius: 0.25rem;
 }
