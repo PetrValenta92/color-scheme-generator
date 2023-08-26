@@ -57,12 +57,8 @@ body {
 
 /* ---------------- UTILITY CLASSES ------------------*/
 
-.container,
-.hex {
-  margin: 0 auto;
-}
-
 .container {
+  margin: 0 auto;
   width: 100%;
   max-width: 34.375rem;
 }
@@ -71,10 +67,27 @@ body {
   display: grid;
 }
 
+.scheme {
+  display: block;
+}
+
+@media (width > 450px) {
+  .scheme {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .color {
-  width: 100%;
-  max-width: 6.875rem;
-  height: 45vh;
+  max-width: 100%;
+  height: 15vh;
+}
+
+@media (width > 450px) {
+  .color {
+    max-width: 100%;
+    height: 45vh;
+  }
 }
 
 .hex {
@@ -171,14 +184,31 @@ form > button:focus-visible::after {
 /* ---------------- LAYOUT -------------------- */
 
 header > .container {
-  padding: 1.5rem 0.875rem;
+  padding: 1.75rem 1.25rem;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  gap: 0.75rem;
+  gap: 1rem;
   background-color: hsl(var(--cl-bg));
 }
 
+@media (width > 450px) {
+  header > .container {
+    padding: 1.5rem 0.875rem;
+    flex-direction: row;
+    align-items: normal;
+    gap: 0.75rem;
+  }
+}
+
 main > .container {
-  grid-template-rows: auto auto;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+}
+
+@media (width > 450px) {
+  main > .container {
+    grid-template-rows: auto auto;
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
