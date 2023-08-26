@@ -4,6 +4,7 @@
   --cl-body-bg: 0, 0%, 11%;
   --cl-input-color-bg: 0, 0%, 90%;
   --cl-border: 216, 12%, 84%;
+  --cl-submit-hover-bg: 209, 98%, 61%;
 
   /* Light mode */
   --cl-bg: 0, 0%, 100%;
@@ -137,11 +138,34 @@ select {
 /* ---------------- BUTTON -------------------- */
 
 form > button {
+  cursor: pointer;
   color: hsl(var(--cl-submit));
   background-color: hsl(var(--cl-submit-bg));
   padding: 0 0.625rem;
   border: 1px solid hsl(var(--cl-submit-border));
   border-radius: 0.25rem;
+  text-decoration: none;
+
+  position: relative;
+  isolation: isolate;
+}
+
+form > button::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: hsl(var(--cl-submit-hover-bg));
+  inset: 0;
+
+  scale: 0 1;
+  transform-origin: right;
+  transition: scale 350ms;
+}
+
+form > button:hover::after,
+form > button:focus-visible::after {
+  transform-origin: left;
+  scale: 1 1;
 }
 
 /* ---------------- LAYOUT -------------------- */
