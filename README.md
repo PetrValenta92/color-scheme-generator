@@ -37,7 +37,7 @@ Default
 
 Mode selection
 
-![Mode selection](./screenshots/screenshot_mode_select.png.png)
+![Mode selection](./screenshots/screenshot_mode_select.png)
 
 Color scheme
 
@@ -49,8 +49,8 @@ Color scheme - dark
 
 ### Links
 
-- Solution URL: [Github Repository](https://github.com/PetrValenta92/tindog)
-- Live Site URL: [Github Pages](https://petrvalenta92.github.io/tindog/)
+- Solution URL: [Github Repository](https://github.com/PetrValenta92/color-scheme-generator)
+- Live Site URL: [Github Pages](https://petrvalenta92.github.io/color-scheme-generator/)
 
 ## My process
 
@@ -58,20 +58,20 @@ Color scheme - dark
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
+- Javascript
+- API requests
+- Query strings
 - Mobile first design
 - Accessibility focus design
 - Responsive design
-- Javascript modules
-- Javascript classes
 
 ### What I learned
 
-I learned to split my javascript code into modules. I also learned how to export and import data from a database file and further work with it using JS classes.
+On this project, I repeated my knowledge of HTML, CSS and Javascript. I learned how to work with API requests and queries for specific data and how to work with this data to return what the user wants. Last but not least, I learned how to copy data to a clipboard.
 
 ### Continued development
 
-I would like to expand the database with more profiles in the future. If a user exhausted all profiles, he/she could have all profiles he/she liked and rejected displayed.
+At the moment I have no plans for further developments. However, I am not opposed to any extension that would increase the UX.
 
 ## Author
 
@@ -82,7 +82,7 @@ I would like to expand the database with more profiles in the future. If a user 
 
 ## Acknowledgments
 
-I would love to thank whole [Scrimba](https://scrimba.com) team for such amazing project they have created. I want to thank the Scrimba community and specialy the [Junior Guru Community](https://junior.guru/) community! 🐣
+I would love to thank whole [Scrimba](https://scrimba.com) team for this project they have created. Also I want to thank the Scrimba community and specialy the [Junior Guru Community](https://junior.guru/) community for support! 🐣
 
 ## About Scrimba
 
