@@ -71,7 +71,7 @@ On this project, I repeated my knowledge of HTML, CSS and Javascript. I learned 
 
 ### Continued development
 
-At the moment I have no plans for further developments. However, I am not opposed to any extension that would increase the UX.
+In the future, I would like to add a toggle button that would allow the user to choose which (light or dark) mode they prefer. Currently the mode setting responds to the user's browser and system settings.
 
 ## Author
 
